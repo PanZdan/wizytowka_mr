@@ -1,14 +1,18 @@
+html {
+  font-size: 62.5%;
+
+}
 * {
   margin: 0;
   box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css?family=ABeeZee:400,400i');
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+*/@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body {
   margin: 0;
   background-color: #fff;
   width: 100%;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .container {
   background-size: contain;
@@ -21,31 +25,52 @@ body {
 .topnav {
   background-color: rgb(37, 41, 51, .7);
   text-align: right;
-  padding-right: 30px;
+  padding: 0 30px;
   overflow: hidden;
   position: fixed;
   width: 100%;
   height: 60px;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 300;
 }
 .topnav ul > li {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
-.topnav ul {
+.topnav ul.main_ul {
   margin: 0;
   padding: 0;
+  display: flex;
 }
 .topnav ul li a {
   display: inline-block;
-  padding: 10px;
+  position: relative;
+  margin: 0 10px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   color: #EEEEEE;
-  line-height: 40px;
+  line-height: 60px;
+}
+.topnav ul li a p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5rem;
+  transition: 0.3s;
+  background-color: #AACBD4;
 }
 .topnav ul li a:hover {
   color: #AACBD4;
 }
+.topnav ul li a:hover p {
+  width: 100%;
+}
+
 .topnav h1, .topnav p {
   float: left;
 }
@@ -69,30 +94,44 @@ body {
   transition: width .4s;
 }
 .logo {
-  width: 230px;
-  display: block;
   float: left;
   line-height: 40px;
-  padding-left: 30px;
   color: #EEEEEE;
+  height: 100%;
 }
 .logo h1 {
-  width: 230px;
   margin: 0;
   display: block;
   text-align: left;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
 }
 .logo p {
   display: block;
-  width: 230px;
   margin: 0;
-  margin-top: -20px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.38rem;
   text-align: left;
+  line-height: 1.8rem;
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
+}
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.logo a img {
+  height: 3.8rem;
+  margin: 3px 0 0 3px;
 }
 header {
-  background-image: url(./image/rawpixel-645295-unsplash.jpg);
+  background-image: url(./image/computer-1149148_1920.jpg);
   background-size: cover;
   background-attachment: fixed;
   min-height: 600px;
@@ -145,7 +184,7 @@ i {
   padding: 50px 10px;
   color: #393E46;
   margin: 0 auto;
-  background-color: #2D848A;
+  background-color: #38ea61;
 }
 .content_body {
   width: 265px;
